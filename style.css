@@ -1,0 +1,803 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe4e9
+        );
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    text-align: center;
+
+    color: #555;
+
+    overflow-x: hidden;
+}
+
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+h1 {
+
+    color: #b76e79;
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+h2 {
+
+    color: #b76e79;
+
+}
+
+
+h3 {
+
+    color: #b76e79;
+
+}
+
+
+p {
+
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button {
+
+    background-color: #b76e79;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 40px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 15px
+        rgba(183, 110, 121, 0.25);
+
+}
+
+
+button:hover {
+
+    background-color: #9f5965;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* ==========================================
+   WELCOME SCREEN
+========================================== */
+
+#welcome-screen {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe4e9
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    padding: 20px;
+
+}
+
+
+#welcome-screen h1 {
+
+    text-shadow:
+        0 2px 5px
+        rgba(183, 110, 121, 0.2);
+
+}
+
+
+.welcome-text {
+
+    font-size: 20px;
+
+}
+
+
+.welcome-date {
+
+    color: #b76e79;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* ==========================================
+   MAIN INVITATION CARD
+========================================== */
+
+.invitation-card {
+
+    background-color: white;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    border:
+        2px solid #e8b4b8;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+    animation:
+        fadeIn 1.2s ease;
+
+}
+
+
+.invitation-card img {
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-top: 20px;
+
+}
+
+
+.decor {
+
+    color: #b76e79;
+
+    font-size: 25px;
+
+    margin: 5px;
+
+}
+
+
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+#details {
+
+    margin-top: 30px;
+
+    display: none;
+
+    padding: 20px;
+
+    border-top:
+        1px solid #e8b4b8;
+
+    background-color: #fff8fa;
+
+    border-radius: 15px;
+
+    animation:
+        detailsAppear 0.8s ease;
+
+}
+
+
+.location-btn {
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+.location-btn:hover {
+
+    opacity: 0.8;
+
+}
+
+
+
+/* ==========================================
+   FRAMES
+========================================== */
+
+.frame {
+
+    width: 88%;
+
+    max-width: 850px;
+
+    margin: 80px auto;
+
+    padding: 70px 35px;
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border-radius:
+        50% 20% 50% 20%
+        /
+        20% 50% 20% 50%;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.08);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(0, 0, 0, 0.08);
+
+    top: -70px;
+
+    right: -60px;
+
+}
+
+
+.frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(0, 0, 0, 0.08);
+
+    bottom: -50px;
+
+    left: -40px;
+
+}
+
+
+
+/* ==========================================
+   NAMES
+========================================== */
+
+.names {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 35px;
+
+    color: #b76e79;
+
+    font-weight: bold;
+
+}
+
+
+.heart {
+
+    color: #b76e79;
+
+    font-size: 50px;
+
+    margin: 20px;
+
+}
+
+
+
+/* ==========================================
+   OUR MOMENTS
+========================================== */
+
+.moments-frame h2 {
+
+    margin-bottom: 30px;
+
+}
+
+
+.frames-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.photo-frame {
+
+    width: 200px;
+
+    height: 250px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+#countdown {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.count-box {
+
+    background-color: #fff0f5;
+
+    border:
+        1px solid #e8b4b8;
+
+    border-radius: 15px;
+
+    width: 90px;
+
+    padding: 15px 5px;
+
+}
+
+
+.count-box span {
+
+    display: block;
+
+    color: #b76e79;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+
+.count-box small {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+
+/* ==========================================
+   DETAILS SECTION
+========================================== */
+
+.details-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin: 30px 0;
+
+}
+
+
+.detail-box {
+
+    width: 180px;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    background-color: #fff8fa;
+
+}
+
+
+.detail-box span {
+
+    font-size: 30px;
+
+}
+
+
+.detail-box h3 {
+
+    margin: 10px 0 5px;
+
+}
+
+
+.detail-box p {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ==========================================
+   GUEST MESSAGE
+========================================== */
+
+.guest-message {
+
+    text-align: center;
+
+    margin: 40px auto;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    padding: 20px;
+
+}
+
+
+.guest-message textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 15px;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+}
+
+
+#messageStatus {
+
+    margin-top: 12px;
+
+    color: #b76e79;
+
+}
+
+
+
+/* ==========================================
+   STORY
+========================================== */
+
+.story-box {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    background-color: #fff8fa;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+}
+
+
+
+/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline {
+
+    max-width: 600px;
+
+    margin: auto;
+
+}
+
+
+.timeline-item {
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    background-color: #fff8fa;
+
+    border-radius: 20px;
+
+}
+
+
+.timeline-item span {
+
+    color: #b76e79;
+
+    font-size: 35px;
+
+}
+
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes detailsAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .frame {
+
+        width: 92%;
+
+        padding:
+            50px 20px;
+
+    }
+
+
+    .names {
+
+        font-size: 27px;
+
+    }
+
+
+    .photo-frame {
+
+        width: 160px;
+
+        height: 210px;
+
+    }
+
+
+    .count-box {
+
+        width: 75px;
+
+    }
+
+
+    .count-box span {
+
+        font-size: 23px;
+
+    }
+
+}
